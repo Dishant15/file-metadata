@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>
+      File Metadata | Dishant Chavda
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Upload file here to know its size!!</h1>
+    <form method="post"  enctype="multipart/form-data" action="/analyze">
+      <input name="file" type="file" />
+      <button type="submit">Upload</button>
+    </form>
+    
+    <script>
+       $(document).ready(function(){
+         if(<%=size%>){
+           alert("files size : <%=size%>");
+         }
+        });
+    </script>
+  </body>
+</html>
